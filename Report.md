@@ -34,8 +34,9 @@ The code uses the following hyper parameters.
 2. Training parameters in are listed at the top of ddpg_agent_ac.py:
 - **BUFFER_SIZE** = int(1e5)  # replay buffer size
 - **BATCH_SIZE** = 128        # minibatch size
-- **LR_ACTOR** = 5e-4         # learning rate of the actor 
-- **LR_CRITIC** = 5e-4        # learning rate of the critic
+- **LR_NORMALIZER** = 1e-3    # learning rate of the normalizer
+- **LR_ACTOR** = 1e-3         # learning rate of the actor 
+- **LR_CRITIC** = 1e-3        # learning rate of the critic
 - **WEIGHT_DECAY** = 1e-5     # L2 weight decay
 - **ACT_FC1** = 200           # Hidden size of the actor network (layer 1)
 - **ACT_FC2** = 100           # Hidden size of the actor network (layer 2)
