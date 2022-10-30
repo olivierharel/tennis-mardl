@@ -55,7 +55,7 @@ useful experience to be able to learn. Slowing doing the decay jumpstarted train
 
 3. I did observe initially a 'learning' crash - where the agents would learn to play very well and then would suddenly
 loose their skills through additional episodes, never to recover them again. I bumped up the replay buffer size and introduced 
-the tau decay to eliminate the issue (I did train over 2000 episodes without a crash)
+the tau decay, as well as a minimum epsilon value (always inject at least a small amount of noise) to eliminate the issue successfully (that is maintain the average score for 1000 episodes after the average score has cleared 1.0).
 
 With the committed settings, training was fast and stable:
 ![Training score curve][image2]
