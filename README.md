@@ -19,7 +19,8 @@ The observation space consists of 8 variables corresponding to the position and 
 We use an implementation of Multi-Agent Deep Deterministic Policy Gradient (MADDPG) based on the Open-AI paper: [Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments](https://arxiv.org/pdf/1706.02275.pdf). In the case of the tennis game,
 we leverage the competitive interaction between the 2 agents in a shared environment to learn a single set of weights.
 
-Without clear documentation on how the observations by the 2 agents differ, we use a small 'normalizer' network to normalize the state across the agents, before passing the normalized state to the common actor and critic. This small network takes in the id of the play (0 or 1) and learns a set of 8 factors (per agent) that are multiplied with the input state. A specific loss term is added for the normalizer that constraints it generate factors close to 1 in absolute value (that is either +1 or -1). This approach could be generalized to environments where the observations by multiple agents differ in a more complex manner.
+For this game, adapting a baseline DDPG architecture to MADPG only requires the proper "normalization" of the agents' respective
+perspectives on the state: to that effect and w/o a-priori understanding of the state variables, we use a small 'normalizer' network to normalize the state across the agents, before passing the normalized state to the common actor and critic. This network takes in the id of the play (0 or 1) and learns a set of 8 factors (per agent) that are multiplied with the input state. A specific loss term is added for the normalizer that constraints it generate factors close to 1 in absolute value (that is either +1 or -1). This approach could be generalized to environments where the observations by multiple agents differ in a more complex manner. In this game, post training, we observe that 4 of the state variables are common to the players and 4 are viewed symmetrically (opposite sign).
 
 The task is episodic, and the environment is considered solved once the agents get an average score of +0.5 (over 100 consecutive episodes, after taking the maximum over both agents).
 
@@ -48,7 +49,7 @@ a. There are 3 main program files:
 - `maddpg.py`: implements the the maddpg class and sets some fundamental hyperparameters (network dimensions, training hyperparameters...)
 - `model.py`: the DL networks used for the local/target critic/actor/normalizer
 
-b. `Continuous_Control.ipynb` has 4 sections:
+b. `Continuous_Control.ipynb` has 5 sections:
   1. `Setup the general environment`: load the unity environment
   2. `Observe the environment space`: printout fundamental information about the environment (size of state/action spaces...)
   3. `Take random actions in the environment`: observe untrained agent
