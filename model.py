@@ -28,9 +28,6 @@ class Normalizer(nn.Module):
     def forward(self, states, agent_ids):
         agent_ids_oh = F.one_hot(agent_ids, self.num_agents).float()
         norm_weights = self.fc(agent_ids_oh).reshape((-1, self.base_state_size))
-        #if agent_ids.size()[0] > 2:
-        #    print(agent_ids_oh)
-        #    print("-------")
         states = states.reshape((-1, self.nstacks, self.base_state_size)).permute(1,0,2)
         states = torch.mul(states, norm_weights).permute(1,0,2).reshape((-1,self.nstacks*self.base_state_size))
         return states
