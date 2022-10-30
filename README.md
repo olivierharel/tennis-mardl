@@ -25,10 +25,11 @@ The task is episodic, and the environment is considered solved once the agents g
 
 ###  Setup the project in your environment
 
-0. Dependencies
+1. Dependencies
    Setup the python environment following https://github.com/udacity/deep-reinforcement-learning#dependencies
 
-1. Download the environment from one of the links below.  You need only select the environment that matches your operating system:
+2. Download the Unity environment from one of the links below. 
+   You need only select the environment that matches your operating system:
     - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Linux.zip)
     - Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis.app.zip)
     - Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Windows_x86.zip)
@@ -38,7 +39,7 @@ The task is episodic, and the environment is considered solved once the agents g
 
     (_For AWS_) If you'd like to train the agent on AWS (and have not [enabled a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md)), then please use [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Linux_NoVis.zip) (version 1) or [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Linux_NoVis.zip) (version 2) to obtain the "headless" version of the environment.  You will **not** be able to watch the agent without enabling a virtual screen, but you will be able to train the agent.  (_To watch the agent, you should follow the instructions to [enable a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md), and then download the environment for the **Linux** operating system above._)
 
-3. Place the file in the reacher/ folder, and unzip it. 
+3. Place the file in the local "Tennis-mardl" folder, and unzip it. 
 
 ### Instructions
 

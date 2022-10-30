@@ -1,8 +1,8 @@
 [//]: # (Image References)
 
-[image2]: https://github.com/olivierharel/continunous-control-rdl/blob/81c69e44294b69e5838b0d5f8b5eba5bd8528541/Training-score-curve.png "Training score curve"
-[image3]: https://github.com/olivierharel/continunous-control-rdl/blob/4d6c50240565a58746094f24410b806925f8cffa/trained10.webp "Trained agent"
-[image4]: https://github.com/olivierharel/continunous-control-rdl/blob/4d6c50240565a58746094f24410b806925f8cffa/untrained10.webp "Untrained agent"
+[image2]: https://github.com/olivierharel/tennis-mardl/blob/main/Training_curve.png "Training score curve"
+[image3]: https://github.com/olivierharel/tennis-mardl/blob/main/trained_agent.webp "Trained agent"
+[image4]: https://github.com/olivierharel/tennis-mardl/blob/main/untrained_agent.webp "Untrained agent"
 
 # Continuous Control project (Reacher) report
 
